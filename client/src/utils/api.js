@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 import { toast } from "react-toastify";
 
 export const api = axios.create({
-  baseURL: "http://localhost:8000/api",
+  baseURL: "http://devch-project-production.up.railway.app/api",
 });
 
 
@@ -188,7 +188,7 @@ export const createResidency = async (data, token) => {
 };
 
 export const deleteResidency = async (id, token) => {
-  const res = await fetch(`http://localhost:8000/api/residency/delete/${id}`, {
+  const res = await fetch(`http://devch-project-production.up.railway.app/api/residency/delete/${id}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
